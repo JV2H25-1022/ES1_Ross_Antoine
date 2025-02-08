@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class JeuBille : MonoBehaviour
 {
 
-    [SerializeReference] private GameObject _sardine;
+    public GameObject PlataformeInitiale;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +21,7 @@ public class JeuBille : MonoBehaviour
 
     public void Starting()
     {
-        if(_sardine != null)
-        {
-          _sardine.SetActive(false);   
-        }
-       
-          
+          PlataformeInitiale.SetActive(false);     
     }
 
 }
