@@ -151,7 +151,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 49597812}
   - {fileID: 1530374472}
   - {fileID: 1820166278}
   - {fileID: 1055542626}
@@ -615,11 +614,11 @@ Transform:
   m_GameObject: {fileID: 49597808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6401014, y: 0.27810478, z: -2.5665374}
+  m_LocalPosition: {x: -13.968498, y: 11.619, z: -8.057981}
   m_LocalScale: {x: 1, y: 0.25892, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4181074}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &62920732 stripped
 Transform:
@@ -2353,7 +2352,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 396984148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: ff1b9a490d615a645b55303917f55b10, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &396984148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9235,7 +9246,7 @@ GameObject:
   - component: {fileID: 1699784012}
   - component: {fileID: 1699784011}
   m_Layer: 0
-  m_Name: JeuBille
+  m_Name: BilleLeJeu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9253,7 +9264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1b9a490d615a645b55303917f55b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plateforme: {fileID: 49597808}
+  _sardine: {fileID: 49597808}
 --- !u!4 &1699784012
 Transform:
   m_ObjectHideFlags: 0
@@ -12305,6 +12316,7 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1699784012}
   - {fileID: 550678303}
+  - {fileID: 49597812}
   - {fileID: 4181074}
   - {fileID: 307060769}
   - {fileID: 1904252683}

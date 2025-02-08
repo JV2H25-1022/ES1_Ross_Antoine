@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class JeuBille : MonoBehaviour
 {
 
-    [SerializeReference] private GameObject _plateforme;
+    [SerializeReference] private GameObject _sardine;
     // Start is called before the first frame update
     void Start()
     {
-        _plateforme.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -18,4 +18,15 @@ public class JeuBille : MonoBehaviour
     {
         
     }
+
+    public void Starting()
+    {
+        if(_sardine != null)
+        {
+          _sardine.SetActive(false);   
+        }
+       
+          
+    }
+
 }
