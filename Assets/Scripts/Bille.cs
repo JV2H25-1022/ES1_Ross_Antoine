@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Bille : MonoBehaviour
 {
-     public string sceneToReload = "ES1-Demo_Devoir"; // Remplacez par le nom de votre scène
-
-    // Le nom ou le tag de l'objet spécifique avec lequel l'objet doit entrer en contact
-    public string objectTag = "Terminus";
-    // Start is called before the first frame update
+    private float timer=0f;
+    
+     [SerializeField] private bool _restart = false;
     void Start()
     {
         
@@ -18,7 +16,13 @@ public class Bille : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(_restart){
+            timer += Time.deltaTime;
+             if(timer >= 5f){
+             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }  
+        }
+ 
     }
         void OnCollisionEnter(Collision collision){
         if(collision.gameObject.CompareTag("Cible")){
@@ -27,18 +31,9 @@ public class Bille : MonoBehaviour
     
         else if (collision.gameObject.CompareTag("Terminus"))
         {
-            StartCoroutine(RedemarrerAvecDelai(5f)); 
+            _restart = true;
+            timer =0f;
+
         }
     }
-
-    
-    IEnumerator RedemarrerAvecDelai(float delay)
-    {
-        
-        yield return new WaitForSeconds(delay);
-        
-       
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
 }
