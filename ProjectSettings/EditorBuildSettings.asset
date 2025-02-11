@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/ES1-Demo_Devoir.unity
+    path: Assets/Scenes/ES1_Ross_Antoine.unity
     guid: 47d52c1af8e716e44a113a9cb0bc9b4b
   m_configObjects: {}
